@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+
+  <style>
+    form {
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      display: flex;
+      border: 2px green;
+      border-radius: 0.5rem;
+      align-items: center;
+      background-color: lightgreen;
+      box-shadow: 5px 5px 15px darkgreen;
+      padding: 1rem;
+      margin: 0.5rem;
+    }
+    h1 {
+      align-self: start;
+      margin-left: 0.5rem;
+      color: darkgreen;
+      font-weight: 550;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+    label {
+      display: block;
+      width: 200px;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-weight: 400;
+    }
+    input {
+      width: 200px;
+    }
+    input[type="submit"] {
+      background-color: yellowgreen;
+      color: black;
+      width: max-content;
+      height: max-content;
+      font-weight: 600;
+    }
+    input[type="reset"] {
+      background-color: goldenrod;
+      color: black;
+      width: max-content;
+      height: max-content;
+      font-weight: 600;
+    }
+    input:hover {
+      background-color: bisque;
+      transition: 0.7s;
+    }
+    input[type="submit"]:hover {
+      background-color: greenyellow;
+      transition: 0.8s;
+    }
+    input[type="reset"]:hover {
+      background-color: gold;
+      transition: 0.8s;
+    }
+    .buttons input {
+      padding: 1rem;
+      box-shadow: black;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      width: 100px;
+    }
+  </style>
+
+  <body>
+    <form action="" method="post" id="form">
+      <div class="title">
+        <h1>Registration</h1>
+      </div>
+      <div class="firstname">
+        <label for="firstname">First name</label>
+        <input
+          type="text"
+          pattern="[a-zA-Z]*"
+          title="Only letters are allowed"
+          placeholder="John"
+          name="firstname"
+          id="firstname"
+          required
+        />
+      </div>
+      <div class="lastname">
+        <label for="lastname">Last name</label>
+        <input
+          type="text"
+          pattern="[a-zA-Z]*"
+          title="Only letters are allowed"
+          placeholder="Doe"
+          name="lastname"
+          id="lastname"
+          required
+        />
+      </div>
+      <div class="phone">
+        <label for="phone">Phone number</label>
+        <input
+          type="tel"
+          onkeyup="this.value = this.value.replace(/\D/, '');"
+          pattern="[0-9]{10}"
+          title="Please enter exactly 10 digits"
+          placeholder="0123456789"
+          name="phone"
+          id="phone"
+          required
+        />
+      </div>
+      <div class="birthdate">
+        <label for="birthdate">Date of birth</label>
+        <input type="date" name="birthdate" id="birthdate" required />
+      </div>
+      <br />
+      <div class="buttons">
+        <input type="submit" value="Submit" id="submit" />
+        <input type="reset" value="Reset" id="reset" />
+      </div>
+    </form>
+  </body>
+
+  <script src="script.js"></script>
+</html>
