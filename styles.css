@@ -1,0 +1,61 @@
+form {
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  display: flex;
+  border: 2px green;
+  border-radius: 0.5rem;
+  align-items: center;
+  background-color: lightgreen;
+  box-shadow: 5px 5px 15px darkgreen;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+h1 {
+  align-self: start;
+  margin-left: 0.5rem;
+  color: darkgreen;
+  font-weight: 550;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+label {
+  display: block;
+  width: 200px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+}
+input {
+  width: 200px;
+}
+input[type="submit"] {
+  background-color: yellowgreen;
+  color: black;
+  width: max-content;
+  height: max-content;
+  font-weight: 600;
+}
+input[type="reset"] {
+  background-color: goldenrod;
+  color: black;
+  width: max-content;
+  height: max-content;
+  font-weight: 600;
+}
+input:hover {
+  background-color: bisque;
+  transition: 0.7s;
+}
+input[type="submit"]:hover {
+  background-color: greenyellow;
+  transition: 0.8s;
+}
+input[type="reset"]:hover {
+  background-color: gold;
+  transition: 0.8s;
+}
+.buttons input {
+  padding: 1rem;
+  box-shadow: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 100px;
+}

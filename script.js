@@ -15,5 +15,4 @@ function onSubmit(e) {
     labelInputbirthdate
   );
 }
-
 form.addEventListener("submit", onSubmit);
