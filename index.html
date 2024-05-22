@@ -16,13 +16,14 @@
         <label for="firstname">First name</label>
         <input
           type="text"
-          pattern="[a-zA-Z]*"
+          pattern="[a-zA-Z+_ äöüÄÖÜß]*"
           title="Only letters are allowed"
           placeholder="John"
           name="firstname"
           id="firstname"
           required
         />
+        <span class="validity"></span>
       </div>
       <div class="lastname">
         <label for="lastname">Last name</label>
@@ -35,6 +36,7 @@
           id="lastname"
           required
         />
+        <span class="validity"></span>
       </div>
       <div class="phone">
         <label for="phone">Phone number</label>
@@ -48,10 +50,19 @@
           id="phone"
           required
         />
+        <span class="validity"></span>
       </div>
       <div class="birthdate">
         <label for="birthdate">Date of birth</label>
-        <input type="date" name="birthdate" id="birthdate" required />
+        <input
+          type="date"
+          title="Date of birth has to be in past"
+          max="2024-05-22"
+          name="birthdate"
+          id="birthdate"
+          required
+        />
+        <span class="validity"></span>
       </div>
       <br />
       <div class="buttons">

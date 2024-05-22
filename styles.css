@@ -13,16 +13,31 @@ form {
 }
 h1 {
   align-self: start;
-  margin-left: 0.5rem;
+  margin-left: 0.5rem; 
+  padding-right: 1rem;
   color: darkgreen;
   font-weight: 550;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 190px;
 }
 label {
   display: block;
   width: 200px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 400;
+}
+span::after {
+  padding-left: 5px;
+}
+
+input:invalid + span::after {
+  content: "✖";
+  color: black;
+}
+
+input:valid + span::after {
+  content: "✓";
+  color: darkgreen;
 }
 input {
   width: 200px;
@@ -57,5 +72,5 @@ input[type="reset"]:hover {
   padding: 1rem;
   box-shadow: black;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  width: 100px;
+  width: 115px;
 }
