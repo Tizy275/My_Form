@@ -17,7 +17,3 @@ function onSubmit(e) {
   );
 }
 form.addEventListener("submit", onSubmit);
-
-if (onSubmit = true) {
-  let buttons.innerText = "Sent";
-}
