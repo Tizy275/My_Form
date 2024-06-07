@@ -1,76 +1,121 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
 form {
-  width: auto;
-  height: auto;
+  width: 100%;
+  max-width: 800px;
   flex-direction: column;
   display: flex;
-  border: 2px green;
+  border: 2px solid green;
   border-radius: 0.5rem;
-  align-items: center;
+  align-items: flex-start;
   background-color: lightgreen;
   box-shadow: 5px 5px 15px darkgreen;
   padding: 1rem;
-  margin: 0.5rem;
+  margin: 1rem;
 }
+
 h1 {
-  align-self: start;
-  margin-left: 0.5rem; 
-  padding-right: 1rem;
   color: darkgreen;
-  font-weight: 550;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  width: 190px;
+  font-weight: 600;
+  width: 100%;
+  text-align: start;
+  margin-bottom: 1rem;
 }
+
 label {
-  display: block;
-  width: 200px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: 400;
+  display: flex;
+  width: 100%;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
+
 span::after {
   padding-left: 5px;
 }
 
 input:invalid + span::after {
-  content: "✖";
-  color: black;
+  content: "X";
+  color: rgba(var(--bs-danger-rgb));
 }
 
 input:valid + span::after {
   content: "✓";
-  color: darkgreen;
+  color: rgba(var(--bs-success-rgb));
 }
+
 input {
-  width: 200px;
+  width: 300px;
+  margin-bottom: 10px;
 }
-input[type="submit"] {
+
+input[type="submit"],
+input[type="reset"] {
   background-color: yellowgreen;
   color: black;
   width: max-content;
   height: max-content;
   font-weight: 600;
+  margin-right: 10px;
 }
+
 input[type="reset"] {
   background-color: goldenrod;
-  color: black;
-  width: max-content;
-  height: max-content;
-  font-weight: 600;
 }
+
 input:hover {
   background-color: bisque;
   transition: 0.7s;
 }
+
 input[type="submit"]:hover {
   background-color: greenyellow;
   transition: 0.8s;
 }
+
 input[type="reset"]:hover {
   background-color: gold;
   transition: 0.8s;
 }
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1rem auto;
+}
+
+table {
+  width: auto;
+  height: auto;
+  border-collapse: collapse;
+  padding: 1rem;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  box-shadow: 1px 1px 1px darkslategrey;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+
 .buttons input {
   padding: 1rem;
-  box-shadow: black;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   width: 115px;
 }

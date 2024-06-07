@@ -5,15 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
   </head>
-
   <body>
-    <form action="" method="post" id="form">
-      <div class="title">
+    <form class="row g-3" action="" method="post" id="form">
+      <div class="col-md-12">
         <h1>Registration</h1>
       </div>
-      <div class="firstname">
-        <label for="firstname">First name</label>
+      <div class="col-md-6">
+        <label for="firstname">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+            />
+          </svg>
+          First name
+        </label>
+        <br />
         <input
           type="text"
           pattern="[a-zA-Z+äöüÄÖÜß]*"
@@ -25,8 +45,23 @@
         />
         <span class="validity"></span>
       </div>
-      <div class="lastname">
-        <label for="lastname">Last name</label>
+      <div class="col-md-6">
+        <label for="lastname">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+            />
+          </svg>
+          Last name
+        </label>
+        <br />
         <input
           type="text"
           pattern="[a-zA-Z]*"
@@ -38,8 +73,24 @@
         />
         <span class="validity"></span>
       </div>
-      <div class="phone">
-        <label for="phone">Phone number</label>
+      <div class="col-md-6">
+        <label for="phone">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telephone-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+            />
+          </svg>
+          Phone number
+        </label>
+        <br />
         <input
           type="tel"
           onkeyup="this.value = this.value.replace(/\D/, '');"
@@ -52,24 +103,64 @@
         />
         <span class="validity"></span>
       </div>
-      <div class="birthdate">
-        <label for="birthdate">Date of birth</label>
+      <div class="col-md-6">
+        <label for="birthdate">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-calendar-event"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+            />
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+            />
+          </svg>
+          Date of birth
+        </label>
+        <br />
         <input
           type="date"
           title="Date of birth has to be in past"
-          max="2024-05-22"
+          max="2024-06-01"
           name="birthdate"
           id="birthdate"
           required
         />
         <span class="validity"></span>
       </div>
-      <br />
-      <div class="buttons">
-        <input type="submit" value="Submit" id="submit" />
-        <input type="reset" value="Reset" id="reset" />
+      <div class="col-md-12 text-center">
+        <input
+          class="btn btn-success me-2"
+          type="submit"
+          value="Submit"
+          id="submit"
+        />
+        <input class="btn btn-warning" type="reset" value="Reset" id="reset" />
       </div>
     </form>
+    <div class="mx-auto p-2 table-responsive" style="width: 100%">
+      <table class="table table-dark table-striped table-hover" id="dataTable">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Phone number</th>
+            <th scope="col">Date of birth</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="col-md-12 text-center">
+      <button id="clearTable" class="btn btn-danger">Clear Table</button>
+    </div>
+    <br />
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
