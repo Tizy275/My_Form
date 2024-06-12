@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   function addRowToTable(entry) {
     const row = tableBody.insertRow();
-    row.insertCell(0).innerText = tableBody.rows.length + 1;
+    row.insertCell(0).innerText = tableBody.rows.length;
     row.insertCell(1).innerText = entry.firstName;
     row.insertCell(2).innerText = entry.lastName;
     row.insertCell(3).innerText = entry.phoneNumber;
